@@ -1,5 +1,5 @@
 name: GrassEatingAnimals
-main: com.github.02JanDal.GrassEatingAnimals.GrassEatingAnimals
+main: de.dalheimer.jan.grasseatinganimals.GrassEatingAnimals
 version: 1.0
 description: Makes all animals that eat grass in real life eat grass in Minecraft
 author: jan@dalheimer.de
