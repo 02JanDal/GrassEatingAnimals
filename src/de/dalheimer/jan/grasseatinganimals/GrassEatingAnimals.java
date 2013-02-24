@@ -12,7 +12,7 @@ import org.bukkit.event.*;
 import org.bukkit.event.entity.*;
 import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 
-import de.dalheimer.jan.janstweaks.GrassEatingCow;
+import de.dalheimer.jan.grasseatinganimals.GrassEatingCow;
 
 public final class GrassEatingAnimals extends JavaPlugin implements Listener {
 	@Override
@@ -40,9 +40,10 @@ public final class GrassEatingAnimals extends JavaPlugin implements Listener {
 
 	@Override
 	public void onDisable() {
-		//TODO
+		
 	}
 
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void onCreatureSpawn(CreatureSpawnEvent event){
 		if (event.isCancelled()) return;
 
