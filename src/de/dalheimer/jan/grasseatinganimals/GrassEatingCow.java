@@ -41,7 +41,6 @@ import org.bukkit.Location;
  * After the food level has reached 0, the cow will take one point of damage each 20 ticks
  */
 
-//TODO babies eating more frequent and needing food to get to adult state
 //TODO make cows try to find grass when hungry
 //TODO take minimum level into account for breeding (which function)
 
@@ -82,7 +81,7 @@ public class GrassEatingCow extends EntityCow {
 		int j = MathHelper.floor(this.locY);
 		int k = MathHelper.floor(this.locZ);
 
-		if(rand.nextInt() % 60 == 1){            
+		if(rand.nextInt() % (isBaby() ? 30 : 60) == 1){            
 			if(this.world.getTypeId(i, j, k) == Block.LONG_GRASS.id && this.foodLevel < maxWithHighGrass){
 				//HACK
 				//if(!CraftEventFactory.callEntityChangeBlockEvent(this.getBukkitEntity(), this.world.getWorld().getBlockAt(i, j, k), Material.AIR).isCancelled()){
